@@ -52,9 +52,9 @@ body {
 }
 /* ------HEADER------ */
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  border: 1px solid #ececec;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
+  border-bottom: 1px solid #ececec;
 }
 .header-container {
   display: flex;
@@ -66,8 +66,8 @@ body {
   align-items: center;
 }
 .logo-header {
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 25px;
+  padding-top: 24px;
   margin-right: 95px;
   font-family: Raleway;
   font-weight: 700;
@@ -93,16 +93,22 @@ body {
   /* margin-left: auto; */
   display: flex;
   align-items: center;
+  padding-bottom: 32px;
+  padding-top: 32px;
 }
 .nav-link-main {
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--accent-color);
 }
 .nav-link {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -113,8 +119,8 @@ body {
   color: var(--accent-color);
 }
 .header-contacts {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 32px;
+  padding-top: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -132,7 +138,7 @@ body {
 .hero {
   background-color: #2f303a;
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 }
 .hero-title {
   margin-bottom: 30px;
@@ -165,13 +171,20 @@ body {
   cursor: pointer;
 }
 /* ------DESCRIPTION------ */
-.el {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 .desc-list {
   display: flex;
 }
-.item:not(:first-child) {
+.desc-item {
+  width: 270px;
+}
+.item:not(:last-child) {
   margin-left: 30px;
 }
 .description-title {
@@ -192,6 +205,10 @@ body {
   justify-content: space-between;
   padding-bottom: 94px;
 }
+.work-list {
+  width: 370px;
+}
+
 .work-title,
 .team-title {
   margin-bottom: 50px;
@@ -209,9 +226,21 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc((100% - 120px) / 4);
+  margin-top: -30px;
+  margin-left: -30px;
+}
+.team-item {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.item-list {
+  margin-top: 30px;
+  margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-name {
-  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -245,6 +274,9 @@ body {
 .footer > address {
   font-style: inherit;
 }
+.footer-cont:not(:last-child) {
+  margin-bottom: 9px;
+}
 .logo-footer {
   font-family: Raleway;
   font-weight: 700;
@@ -274,14 +306,16 @@ body {
 .menu-buttom {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
+}
+.btn-list:not(:last-child) {
+  margin-right: 8px;
 }
 .menu-btn {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 22px;
   padding-right: 22px;
-  margin-bottom: 50px;
-  margin-right: 8px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -314,9 +348,13 @@ body {
   /* flex-basis: calc((100% - 90px) / 3); */
   border-bottom: 1px solid #ececec;
 }
+.menu-item {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .menu-link-title {
-  margin-left: 24px;
-  margin-top: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -324,8 +362,6 @@ body {
   color: var(--main-color);
 }
 .menu-link-text {
-  margin-left: 24px;
-  font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--description-color);
