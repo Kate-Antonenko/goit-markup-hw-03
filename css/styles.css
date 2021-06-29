@@ -201,6 +201,9 @@ body {
   border-radius: 4px;
 }
 /* ------DESCRIPTION------ */
+.section.description {
+  padding-bottom: 0;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -374,8 +377,7 @@ body {
 .portfolio-list {
   margin-left: 30px;
   margin-top: 30px;
-  /* flex-basis: calc((100% - 90px) / 3); */
-  border-bottom: 1px solid var(--border-color);
+  flex-basis: calc((100% - 90px) / 3);
 }
 .menu-item {
   padding: 20px 24px;
@@ -384,6 +386,7 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 .menu-link-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
